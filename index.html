@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Ella's Collection</title>
+</head>
+<body class="bg-gray-200 text-gray-700 font-[Raleway]">
+    <!--Using Vanilla Css and Js for just the navigation bar-->
+   <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar bg-gray-600 w-screen md:w-[600px] py-5" id="sidebar">
+        <div class="sidebar-header flex justify-between  px-6 md:px-6 mt-2">
+            <button aria-label="button" class="logo px-3 sm:px-5">
+                <a href="/project 1/index.html" class="text-xl text-white font-extrabold uppercase ">Ella's Collection</a>
+            </button>
+            <button class="sidebar-close cursor-pointer" id="sidebarClose">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="fill-white hover:fill-red-400 w-5 h-5 md:w-6 md:h-6 font-bold cursor-pointer"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+             </button>
+        </div>
+
+        <ul class="sidebar-nav mt-2 sm:mt-6 flex flex-col items-start gap-3 m-w-76 px-4 md:px-6">
+           <ul class="flex flex-col items-start mt-4 gap-2 sm:gap-3 px-4 md:px-6">
+                <li class="font-normal cursor-pointer text-lg text-white opacity-[.8] hover:text-white hover:font-semibold"><a href="/project 1/index.html">Home</a></li>
+                        
+                <li class="font-normal cursor-pointer text-lg text-white opacity-[.8] hover:text-white hover:font-semibold"><a href="">My Profile</a></li>
+                                
+                <ul class="flex flex-col items-start mt-4 gap-4 sm:gap-3 px-4 md:px-6">
+                    
+            </ul>        
+                        <p class="cursor-normal text-gray-100 font-semibold text-lg uppercase">Featured</p>
+                        <li class="font-normal cursor-pointer text-lg text-white opacity-[.8] hover:text-white hover:font-semibold"><a href="">Just Arrive</a></li>
+                        <li class="font-normal cursor-pointer text-lg text-white opacity-[.8] hover:text-white hover:font-semibold">For Men</li>
+                        <li class="font-normal cursor-pointer text-lg text-white opacity-[.8] hover:text-white hover:font-semibold">For Women</li>
+                    </ul>
+                    
+            <ul class="flex flex-col items-start mt-4 gap-4 sm:gap-4 px-4 md:px-6">
+               <p class="cursor-normal text-gray-100 font-semibold text-lg uppercase">Categories</p>
+                <li class="font-normal cursor-pointer text-lg text-white opacity-[.8] hover:text-white hover:font-semibold"><a href="">Dress</a></li>
+                <li class="font-normal cursor-pointer text-lg text-white opacity-[.8] hover:text-white hover:font-semibold">Tee Shirts</li>
+                <li class="font-normal cursor-pointer text-lg text-white opacity-[.8] hover:text-white hover:font-semibold">Wigs</li>
+                <li class="font-normal cursor-pointer text-lg text-white opacity-[.8] hover:text-white hover:font-semibold">Hoodies</li>
+                <li class="font-normal cursor-pointer text-lg text-white opacity-[.8] hover:text-white hover:font-semibold">Shoes</li>
+            </ul>
+        </ul>  
+    </nav>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar px-2 lg:px-20 w-fill items-center h-[3.8rem] bg-gray-200" id="navbar">
+        <div class="navbar-left">
+            <button aria-label="button"class="hamburger" id="hamburger" class="hover:text-gray-600 cursor-pointer p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-left hover:text-darkColor hoverEffect cursor-pointer"><path d="M15 12H3"></path><path d="M17 18H3"></path><path d="M21 6H3"></path></svg>
+            </button>
+        </div>
+        
+        <button aria-label="button" class="logo">
+            <a href="/project 1/index.html" class="text-xl sm:text-2xl text-gray-700 font-extrabold ">Ella's Collection</a>
+        </button>
+        
+        <div class="navbar-right">
+            <div class="flex items-center gap-2 lg:gap-4">
+                <a class="group relative hover:text-gray-600" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag w-5 h-5 group-hover:text-darkColor hoverEffect"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+
+                    <span class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full w-4 h-4 text-center flex justify-center items-center text-sm font-semibold uppercase">0</span>
+                </a>
+                <a href="#" class="hover:text-black underline text-gray-700 text-sm">Log in</a>
+            </div>
+        </div>
+    </nav>
+    <!-- <nav class="navbar" id="navbar" id="bar">
+        <div class="sidebar-nav" class="fixed top-[0] z-[1000] bg-black w-screen sm:w-[55vw] left-[-100vw]  md:w-[60vw] translate-x-0 h-screen p-4 sm:pt-5 px-4">
+            <div class="pt-3">
+                <div class="flex justify-between items-center mb-8">
+                    
+
+                    
+                </div>
+                
+
+               
+            </div>
+        </div>
+        <div class="flex justify-between items-center relative md:sticky py-2 px-3 lg:px-20 md:px-10 ">
+            <div class="hover:text-red-500 hover-effect">
+                <button aria-label="button"class="hamburger" id="hamburger" class="hover:text-gray-600 cursor-pointer p-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-left hover:text-darkColor hoverEffect"><path d="M15 12H3"></path><path d="M17 18H3"></path><path d="M21 6H3"></path></svg>
+                </button>
+            </div>
+
+            
+
+            <div class="flex items-center gap-2 lg:gap-4">
+                <a class="group relative hover:text-gray-600" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag w-5 h-5 group-hover:text-darkColor hoverEffect"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+
+                    <span class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full w-4 h-4 text-center flex justify-center items-center text-sm font-semibold uppercase">0</span>
+                </a>
+                <a href="#" class="hover:text-black underline text-gray-700 text-sm">Log in</a>
+            </div>
+        </div>
+    </nav> -->
+
+    <main class=" pb-3 lg:px-20">
+        <div class="mb-5 px-3 sm:px-0 relative flex h-[500px] sm:h-[700px] overflow-hidden bg-[rgba(0,0,0,0.5)]">
+            <div class="absolute z-[-9] w-full h-full">
+                <video src="/project 1/COLLECTIONS/CONVERSE SNEAKERS.mp4" loop muted autoplay class="h-[100%] w-full object-cover"></video>
+            </div>    
+
+            <div class="py-3 flex flex-col justify-center items-center text-center gap-3 lg:gap-4 w-screen">
+                <h1 class="font-black md:font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-600 text-center text-4xl sm:text-7xl uppercase">New Arrival</h1>
+
+                <h5 class="text-amber-200 font-bold text-3xl underline">
+                    Sneakers store
+                </h5>
+
+                <p class="text-center text-gray-200 md:text-lg text-base mb-2 leading-[1.25] font-normal">
+                    Shop our sneakers collection
+                </p>
+
+                <a href="" class="bg-black text-white block  py-3 w-40 md:w-50 hover:bg-gray-800 rounded-lg hover:text-amber-600">Explore</a>
+            </div>
+        </div>
+
+        <div class="my-6 py-4 rounded-lg">
+            <h2 class="text-xl sm:text-3xl text-center text-gray-700 font-semibold uppercase uppercase mb-7">Browse Our Collections</h2>
+            <swiper-container class="mySwiper mb-4 sm:mb-8" init="false">
+            <swiper-slide class="h-[400px] sm:h-[450px] w-full flex flex-col justify-end items-start rounded-lg group relative overflow-hidden items-stretch transition duration-300 delay-300 hover:shadow-2xl hovereffect">
+                <div class="absolute w-full h-full">
+                    <img src="/project 1/SHIRTS/Reece T shirts.jpg" class="h-full w-full object-cover group-hover:scale-105 duration-300" alt="">
+                </div>
+                <div class="bg-white flex w-full justify-between items-center z-[99] shadow-lg p-2" >
+                    <h3 class="font-semibold uppercase">Tee Shirt</h3>
+                    <a href="" class="hover:text-darkColor hoverEffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" viewBox="0 -960 960 960" width="1.4rem" class="lucide lucide-align-left hover:text-darkColor hoverEffect"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                    
+                </div>
+            </swiper-slide>
+            <swiper-slide class="h-[400px] sm:h-[450px] w-full flex flex-col justify-end items-start rounded-lg group relative overflow-hidden items-stretch transition duration-300 delay-300 hover:shadow-2xl hovereffect ">
+                <div class="absolute w-full h-full">
+                    <img src="/project 1/SHIRTS/SHORTS.jpg" class="h-full w-full object-cover group-hover:scale-105 duration-300" alt="">
+                </div>
+                <div class="bg-white flex w-full justify-between items-center z-[99] shadow-lg p-2">
+                    <h3 class="font-semibold uppercase">Shorts</h3>
+                    <a href="" class="hover:text-darkColor hoverEffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" viewBox="0 -960 960 960" width="1.4rem" class="lucide lucide-align-left hover:text-darkColor hoverEffect"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="h-[400px] sm:h-[450px] w-full flex flex-col justify-end items-start rounded-lg group relative overflow-hidden items-stretch transition duration-300 delay-300 hover:shadow-2xl hovereffect">
+                <div class="absolute w-full h-full">
+                    <img src="/project 1/SHIRTS/HOODIE.jpg" class="h-full w-full object-cover group-hover:scale-105 duration-300" alt="">
+                </div>
+                <div class="bg-white flex w-full justify-between items-center z-[99] shadow-lg p-2">
+                    <h3 class="font-semibold uppercase">Sweatshirts</h3>
+                    <a href="" class="hover:text-darkColor hoverEffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" viewBox="0 -960 960 960" width="1.4rem" class="lucide lucide-align-left hover:text-darkColor hoverEffect"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="h-[400px] sm:h-[450px] w-full flex flex-col justify-end items-start rounded-lg group relative overflow-hidden items-stretch transition duration-300 delay-300 hover:shadow-2xl hovereffect">
+                <div class="absolute w-full h-full">
+                    <img src="/project 1/SHIRTS/HAIR.jpeg" class="h-full w-full object-cover group-hover:scale-105 duration-300" alt="">
+                </div>
+                <div class="bg-white flex w-full justify-between items-center z-[99] shadow-lg p-2">
+                    <h3 class="font-semibold uppercase">Wigs-Extension</h3>
+                    <a href="" class="hover:text-darkColor hoverEffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" viewBox="0 -960 960 960" width="1.4rem" class="lucide lucide-align-left hover:text-darkColor hoverEffect"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="h-[400px] sm:h-[450px] w-full flex flex-col justify-end items-start rounded-lg group relative overflow-hidden items-stretch transition duration-300 delay-300 hover:shadow-2xl hovereffect">
+                <div class="absolute w-full h-full">
+                    <img src="/project 1/SHIRTS/HAT.jpg" class="h-full w-full object-cover group-hover:scale-105 duration-300" alt="">
+                </div>
+                <div class="bg-white flex w-full justify-between items-center z-[99] shadow-lg p-2">
+                    <h3 class="font-semibold uppercase">Adds-On</h3>
+                    <a href="" class="hover:text-darkColor hoverEffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" viewBox="0 -960 960 960" width="1.4rem" class="lucide lucide-align-left hover:text-darkColor hoverEffect"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="h-[400px] sm:h-[450px] w-full flex flex-col justify-end items-start rounded-lg group relative overflow-hidden items-stretch transition duration-300 delay-300 hover:shadow-2xl hovereffect">
+                <div class="absolute w-full h-full">
+                    <img src="/project 1/SHOES/Air Jordan 4 Retro.jpg" class="h-full w-full object-cover group-hover:scale-105 duration-300" alt="">
+                </div>
+                <div class="bg-white flex w-full justify-between items-center z-[99] shadow-lg p-2">
+                    <h3 class="font-semibold uppercase">Shoes</h3>
+                    <a href="" class="hover:text-darkColor hoverEffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" viewBox="0 -960 960 960" width="1.4rem" class="lucide lucide-align-left hover:text-darkColor hoverEffect"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="h-[400px] sm:h-[450px] w-full flex flex-col justify-end items-start rounded-lg group relative overflow-hidden items-stretch transition duration-300 delay-300 hover:shadow-2xl hovereffect">
+                <div class="absolute w-full h-full">
+                    <img src="/project 1/SHIRTS/DRESS.webp" class="h-full w-full object-cover group-hover:scale-105 duration-300" alt="">
+                </div>
+                <div class="bg-white flex w-full justify-between items-center z-[99] shadow-lg p-2">
+                    <h3 class="font-semibold uppercase">Female Dress</h3>
+                    <a href="" class="hover:text-darkColor hoverEffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" viewBox="0 -960 960 960" width="1.4rem" class="lucide lucide-align-left hover:text-darkColor hoverEffect"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="h-[400px] sm:h-[450px] w-full flex flex-col justify-end items-start rounded-lg group relative overflow-hidden items-stretch transition duration-300 delay-300 hover:shadow-2xl hovereffect">
+                <div class="absolute w-full h-full">
+                    <img src="/project 1/SHIRTS/PANTS.webp" class="h-full w-full object-cover group-hover:scale-105 duration-300" alt="">
+                </div>
+                <div class="bg-white flex w-full justify-between items-center z-[99] shadow-lg p-2">
+                    <h3 class="font-semibold uppercase">Pants</h3>
+                    <a href="" class="hover:text-darkColor hoverEffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" viewBox="0 -960 960 960" width="1.4rem" class="lucide lucide-align-left hover:text-darkColor hoverEffect"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+                    </a>
+                </div>
+            </swiper-slide>
+          </swiper-container>
+
+          <div class="flex justify-center items-center mt-4">
+            <a href="" class="sm:text-xl font-semibold text-lg text-gray-700 hover:text-500 hover:scale-105 transition delay-100 duration-200 ease hover:underline">View All</a>
+          </div>
+        </div>
+
+        <div class="flex flex-col mt-4 pt-6 pb-2 items-center">
+            <h2 class="text-center font-bold text-gray-700 text-2xl md:text-4xl">Featured Products</h2>
+
+            <p class="text-center text-gray-700 text-base md:text-lg mt-2 mb-4">Products we recommend just for you</p>
+        </div>    
+
+        <div class="my-4 md:my-10 px-4">
+            <div class="py-4 mt-3">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 items-stretch h-full">
+                        <a href="" class="group text-sm rounded-lg overflow-hidden block hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
+                        <div class="relative group bg-zinc-50 w-full h-50 sm:h-70">
+                            <img width="500px" height="500px" src="/project 1/SHIRTS/BLACK SHIRT.webp" class="w-full h-48 sm:h-60 md:h-72 object-contain object-center overflow-hidden hoverEffect group-hover:scale-105" alt="">
+                        </div>
+                         <div class="py-2 sm:py-3 px-2 flex flex-col gap-1 sm:gap-2 bg-zinc-50 border border-zinc-200 border-t-0 rounded-lg rounded-tl-none rounded-tr-none flex-1">
+                            <h3 class="font-semibold sm:text-lg uppercase line-clamp-[2] leading-tight text-black">
+                                black tee shirt
+                            </h3>
+                            <p class="font-normal text-sm leading-relaxed line-clamp-[2] sm:line-clamp-[3]">
+                                A classic black tee shirt made from soft, breathable cotton—simple, versatile, and perfect for everyday wear.
+                            </p>
+                            <div class="flex gap-1 items-center">
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-zinc-300 fill-zinc-300 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-zinc-300 fill-zinc-300 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+
+                                <p class="text-[15px] text-gray-500">(1)</p>
+                            </div>
+                            <p class="font-bold text-red-600 text-base sm:text-xl">₦15,000</p>
+                         </div>
+                    </a>
+
+                        <a href="" class="group text-sm rounded-lg overflow-hidden block hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
+                        <div class="relative group bg-zinc-50 w-full h-50 sm:h-70">
+                            <img width="500px" height="500px" src="/project 1/SHIRTS/ADDIDAS JERSEY.webp" class="w-full h-48 sm:h-60 md:h-72 object-contain object-center overflow-hidden hoverEffect group-hover:scale-105" alt="">
+                        </div>
+                         <div class="py-2 sm:py-3 px-2 flex flex-col gap-1 sm:gap-2 bg-zinc-50 border border-zinc-200 border-t-0 rounded-lg rounded-tl-none rounded-tr-none flex-1">
+                            <h3 class="font-semibold sm:text-lg uppercase line-clamp-[2] leading-tight text-black">
+                                addidas jersey
+                            </h3>
+                            <p class="font-normal text-sm leading-relaxed line-clamp-[2] sm:line-clamp-[3]">
+                                A clean and classic white Adidas tee shirt featuring the iconic logo, crafted from soft cotton for everyday comfort and sporty style.
+                            </p>
+                            <div class="flex gap-1 items-center">
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-zinc-300 fill-zinc-300 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <p class="text-[15px] text-gray-500">(3)</p>
+                            </div>
+                            <p class="font-bold text-red-600 text-base sm:text-xl">₦25,850</p>
+                         </div>
+                    </a>
+
+                        <a href="" class="group text-sm rounded-lg overflow-hidden block hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
+                        <div class="relative group bg-zinc-50 w-full h-50 sm:h-70">
+                            <img width="500px" height="500px" src="/project 1/SHOES/Air Jordan 4 Retro.jpg" class="w-full h-48 sm:h-60 md:h-72 object-contain object-center overflow-hidden hoverEffect group-hover:scale-105" alt="">
+                        </div>
+                         <div class="py-2 sm:py-3 px-2 flex flex-col gap-1 sm:gap-2 bg-zinc-50 border border-zinc-200 border-t-0 rounded-lg rounded-tl-none rounded-tr-none flex-1">
+                            <h3 class="font-semibold sm:text-lg uppercase line-clamp-[2] leading-tight text-black">
+                                air jordan 4 retro
+                            </h3>
+                            <p class="font-normal text-sm leading-relaxed line-clamp-[2] sm:line-clamp-[3]">
+                                The Air Jordan Retro combines iconic design with premium materials, featuring classic colorways and heritage details for a timeless, athletic look.
+                            </p>
+                                <div class="flex gap-1 items-center">
+                                    <button class="text-amber-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                    </button>
+                                    <button class="text-amber-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                    </button>
+                                    <button class="text-amber-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                    </button>
+                                    <button class="text-amber-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                    </button>
+                                    <p class="text-[15px] text-gray-500">(10)</p>
+                                </div>
+                            <p class="font-bold text-red-600 text-base sm:text-xl">₦45,000</p>
+                         </div>
+                    </a>
+                    
+                        <a href="" class="group text-sm rounded-lg overflow-hidden block hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
+                        <div class="relative group bg-zinc-50 w-full h-50 sm:h-70">
+                            <img width="500px" height="500px" src="/project 1/SHIRTS/Fear of God Essentials full.jpg" class="w-full h-48 sm:h-60 md:h-72 object-contain object-center overflow-hidden hoverEffect group-hover:scale-105" alt="">
+                        </div>
+                         <div class="py-2 sm:py-3 px-2 flex flex-col gap-1 sm:gap-2 bg-zinc-50 border border-zinc-200 border-t-0 rounded-lg rounded-tl-none rounded-tr-none flex-1">
+                            <h3 class="font-semibold sm:text-lg uppercase line-clamp-[2] leading-tight text-black">
+                                fear of god tee shirt
+                            </h3>
+                            <p class="font-normal text-sm leading-relaxed line-clamp-[2] sm:line-clamp-[3]">
+                                LA Fear of God tee shirt crafted with premium cotton, featuring a relaxed fit and minimalist design—elevating everyday essentials with understated luxury.
+                            </p>
+                            <div class="flex gap-1 items-center">
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <p class="text-[15px] text-gray-500">(2)</p>
+                            </div>
+                            <p class="font-bold text-red-600 text-base sm:text-xl">₦24,550</p>
+                         </div>
+                    </a>
+
+                        <a href="" class="group text-sm rounded-lg overflow-hidden block hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
+                        <div class="relative group bg-zinc-50 w-full h-50 sm:h-70">
+                            <img width="500px" height="500px" src="/project 1/SHOES/NEW BALANCE CREAM.webp" class="w-full h-48 sm:h-60 md:h-72 object-contain object-center overflow-hidden hoverEffect group-hover:scale-105" alt="">
+                        </div>
+                         <div class="py-2 sm:py-3 px-2 flex flex-col gap-1 sm:gap-2 bg-zinc-50 border border-zinc-200 border-t-0 rounded-lg rounded-tl-none rounded-tr-none flex-1">
+                            <h3 class="font-semibold sm:text-lg uppercase line-clamp-[2] leading-tight text-black">
+                                new balance sneaker:cream
+                            </h3>
+                            <p class="font-normal text-sm leading-relaxed line-clamp-[2] sm:line-clamp-[3]">
+                               New Balance cream sneakers with a sleek, neutral tone—crafted for comfort and everyday style, blending retro vibes with modern cushioning.
+                            </p>
+                            <div class="flex gap-1 items-center">
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <p class="text-[15px] text-gray-500">(5)</p>
+                            </div>
+                            <p class="font-bold text-red-600 text-base sm:text-xl">₦60,870</p>
+                         </div>
+                    </a>
+
+                        <a href="" class="group text-sm rounded-lg overflow-hidden block hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
+                        <div class="relative group bg-zinc-50 w-full h-50 sm:h-70">
+                            <img width="500px" height="500px" src="/project 1/SHIRTS/NYC TEE SHIRT.webp" class="w-full h-48 sm:h-60 md:h-72 object-contain object-center overflow-hidden hoverEffect group-hover:scale-105" alt="">
+                        </div>
+                         <div class="py-2 sm:py-3 px-2 flex flex-col gap-1 sm:gap-2 bg-zinc-50 border border-zinc-200 border-t-0 rounded-lg rounded-tl-none rounded-tr-none flex-1">
+                            <h3 class="font-semibold sm:text-lg uppercase line-clamp-[2] leading-tight text-black">
+                                nyc graphic tee shirt
+                            </h3>
+                            <p class="font-normal text-sm leading-relaxed line-clamp-[2] sm:line-clamp-[3]">
+                                A bold graphic tee shirt featuring eye-catching artwork—made from soft cotton for comfort and designed to make a statement with every wear.
+                            </p>
+                            <div class="flex gap-1 items-center">
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <p class="text-[15px] text-gray-500">(15)</p>
+                            </div>
+                            <p class="font-bold text-red-600 text-base sm:text-xl">₦18,000</p>
+                         </div>
+                    </a>
+
+                        <a href="" class="group text-sm rounded-lg overflow-hidden block hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
+                        <div class="relative group bg-zinc-50 w-full h-50 sm:h-70">
+                            <img width="500px" height="500px" src="/project 1/SHOES/SOFT SHOES.webp" class="w-full h-48 sm:h-60 md:h-72 object-contain object-center overflow-hidden hoverEffect group-hover:scale-105" alt="">
+                        </div>
+                         <div class="py-2 sm:py-3 px-2 flex flex-col gap-1 sm:gap-2 bg-zinc-50 border border-zinc-200 border-t-0 rounded-lg rounded-tl-none rounded-tr-none flex-1">
+                            <h3 class="font-semibold sm:text-lg uppercase line-clamp-[2] leading-tight text-black">
+                                men soft shoe
+                            </h3>
+                            <p class="font-normal text-sm leading-relaxed line-clamp-[2] sm:line-clamp-[3]">
+                                A soft shoe designed for all-day comfort, featuring a flexible sole, cushioned insole, and lightweight materials for effortless, everyday wear.
+                            </p>
+                            <div class="flex gap-1 items-center">
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <p class="text-[15px] text-gray-500">(3)</p>
+                            </div>
+                            <p class="font-bold text-red-600 text-base sm:text-xl">₦35,000</p>
+                         </div>
+                    </a>
+
+                        <a href="" class="group text-sm rounded-lg overflow-hidden block hover:shadow-lg transition-shadow duration-200 h-full flex flex-col">
+                        <div class="relative group bg-zinc-50 w-full h-50 sm:h-70">
+                            <img width="500px" height="500px" src="/project 1/SHIRTS/HAT.jpg" class="w-full h-48 sm:h-60 md:h-72 object-contain object-center overflow-hidden hoverEffect group-hover:scale-105" alt="">
+                        </div>
+                         <div class="py-2 sm:py-3 px-2 flex flex-col gap-1 sm:gap-2 bg-zinc-50 border border-zinc-200 border-t-0 rounded-lg rounded-tl-none rounded-tr-none flex-1">
+                            <h3 class="font-semibold sm:text-lg uppercase line-clamp-[2] leading-tight text-black">
+                                brown baseball hat
+                            </h3>
+                            <p class="font-normal text-sm leading-relaxed line-clamp-[2] sm:line-clamp-[3]">
+                                A brown baseball hat with a classic curved brim, adjustable strap, and relaxed fit—perfect for casual, everyday style with a warm, earthy tone.
+                            </p>
+                            <div class="flex gap-1 items-center">
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-yellow-400 fill-yellow-400 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <button class="curson-normal text-amber-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-zinc-300 fill-zinc-300 transition-colors duration-200"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                                </button>
+                                <p class="text-[15px] text-gray-500">(3)</p>
+                            </div>
+                            <p class="font-bold text-red-600 text-base sm:text-xl">₦15,000</p>
+                         </div>
+                     </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="border-t border-t-gray-300 py-3 border-b border-b-gray-300">
+            <div class="grid lg:grid-cols-4 grid-cols-2 p-4 gap-6">
+                <div class="flex gap-1 items-center flex-col sm:flex-row">
+                    <button type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="none" class="fill-gray-700 w-8 h-8 font-light"><path d="M880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720Zm-720 80h640v-80H160v80Zm0 160v240h640v-240H160Zm0 240v-480 480Z"/></svg>
+                    </button>
+
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-bold">Secure Payments</p>
+                        <p class="font-light text-sm">Multiple payment options</p>
+                    </div>
+                </div>
+                <div class="flex gap-1 items-center flex-col sm:flex-row">
+                    <button type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="none" class="fill-gray-700 w-8 h-8 font-light"><path d="m480-320 56-56-63-64h167v-80H473l63-64-56-56-160 160 160 160ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h168q13-36 43.5-58t68.5-22q38 0 68.5 22t43.5 58h168q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm280-590q13 0 21.5-8.5T510-820q0-13-8.5-21.5T480-850q-13 0-21.5 8.5T450-820q0 13 8.5 21.5T480-790ZM200-200v-560 560Z"/></svg>
+                    </button>
+
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-bold">Returns & Exchanges</p>
+                        <p class="font-light text-sm">Easy 7-day return policy</p>
+                    </div>
+                </div>
+                <div class="flex gap-1 items-start sm:items-center flex-col sm:flex-row">
+                    <button type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg"viewBox="0 -960 960 960" fill="none" class="fill-gray-700 w-8 h-8 font-light"><path d="M480-80q-106 0-173-33.5T240-200q0-24 14.5-44.5T295-280l63 59q-9 4-19.5 9T322-200q13 16 60 28t98 12q51 0 98.5-12t60.5-28q-7-8-18-13t-21-9l62-60q28 16 43 36.5t15 45.5q0 53-67 86.5T480-80Zm1-220q99-73 149-146.5T680-594q0-102-65-154t-135-52q-70 0-135 52t-65 154q0 67 49 139.5T481-300Zm-1 100Q339-304 269.5-402T200-594q0-71 25.5-124.5T291-808q40-36 90-54t99-18q49 0 99 18t90 54q40 36 65.5 89.5T760-594q0 94-69.5 192T480-200Zm0-320q33 0 56.5-23.5T560-600q0-33-23.5-56.5T480-680q-33 0-56.5 23.5T400-600q0 33 23.5 56.5T480-520Zm0-80Z"/></svg>
+                    </button>
+
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-bold">Order Tracking</p>
+                        <p class="font-light text-sm">Real-time updates on your purchases</p>
+                    </div>
+                </div>
+                <div class="flex gap-1 items-center flex-col sm:flex-row">
+                    <button type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="none" class="fill-gray-700 w-8 h-8 font-light"><path d="m480-80-10-120h-10q-142 0-241-99t-99-241q0-142 99-241t241-99q71 0 132.5 26.5t108 73q46.5 46.5 73 108T800-540q0 75-24.5 144t-67 128q-42.5 59-101 107T480-80Zm80-146q71-60 115.5-140.5T720-540q0-109-75.5-184.5T460-800q-109 0-184.5 75.5T200-540q0 109 75.5 184.5T460-280h100v54Zm-101-95q17 0 29-12t12-29q0-17-12-29t-29-12q-17 0-29 12t-12 29q0 17 12 29t29 12Zm-29-127h60q0-30 6-42t38-44q18-18 30-39t12-45q0-51-34.5-76.5T460-720q-44 0-74 24.5T344-636l56 22q5-17 19-33.5t41-16.5q27 0 40.5 15t13.5 33q0 17-10 30.5T480-558q-35 30-42.5 47.5T430-448Zm30-65Z"/></svg>
+                    </button>
+
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-bold">Customer Support</p>
+                        <p class="font-light text-sm">Live chat and email support for all inquiries</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <footer class="border-t border-gray-400 pt-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-6 gap-7 sm:gap-10 px-3 pt-7">
+                <div class="flex flex-col justify-start items-start gap-4">
+                    <button aria-label="button" class="logo">
+                        <a href="/project 1/index.html" class="text-xl sm:text-2xl text-gray-700 font-extrabold ">Ella's Collection</a>
+                    </button>
+
+                    <p class="text-sm">Ella’s Collection is a curated blend of timeless elegance and modern edge. From minimalist essentials to standout statement pieces, every item is handpicked to reflect effortless style and individuality. Designed for those who love fashion with intention, Ella’s Collection brings quality, comfort, and confidence to your everyday look.</p>
+
+                    <div class="flex gap-4 items-center">
+                        <a href="" class="p-1 border border-gray-500 rounded-lg opacity-[.8] transition hover:opacity-[1] hover:border-black hover:scale-105 duration-100 delay-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fill-gray-700 w-7 h-7 md:w-6 md:h-6 font-bold"><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
+                        </a>
+                        <a href="" class="p-1 border border-gray-500 rounded-lg opacity-[.8] transition hover:opacity-[1] hover:border-black hover:scale-105 duration-100 delay-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fill-gray-700 w-7 h-7 md:w-6 md:h-6 font-bold"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                        </a>
+                        <a href="" class="p-1 border border-gray-500 rounded-lg opacity-[.8] transition hover:opacity-[1] hover:border-black hover:scale-105 duration-100 delay-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fill-gray-700 w-7 h-7 md:w-6 md:h-6 font-bold"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-start items-start gap-3">
+                    <h3 class="font-semibold text-lg">Ouick Links</h3>
+                    <a href="" class="text-gray-650 text-sm hover:text-black md:text-base">About us</a>
+                    <a href="" class="text-gray-650 text-sm hover:text-black md:text-base">Contact us</a>
+                    <a href="" class="text-gray-650 text-sm hover:text-black md:text-base">Terms & Conditions</a>
+                    <a href="" class="text-gray-650 text-sm hover:text-black md:text-base">Order Tracking</a>
+                    <a href="" class="text-gray-650 text-sm hover:text-black md:text-base">FAQs</a>
+                </div>
+
+                <div class="flex flex-col  gap-3">
+                    <h3 class="font-semibold text-lg uppercase">Subscibe to our Newsletter</h3>
+                    <p class="text-sm">Be the first one to receive new products update, special offers and more.</p>
+
+                    <div class="flex flex-col w-fill gap-3">
+                        <form action="" class="">
+                            <input type="email" class="flex h-10 bg-transparent text-base shadow-sm transition-color placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm w-full px-4 py-2 border border-gray-500 rounded-none focus:outline-none focus:ring-2 focus:ring-black rounded-sm" placeholder="Enter your email" required="" value="">
+                        </form>
+                        
+                        <button class="bg-gray-700 hover:bg-gray-600 ease transition delay-200 duration-200 text-white py-2 px-4 h-12 cursor-pointer rounded-sm">
+                            subscribe
+                        </button>
+                    </div>
+ 
+                </div>
+            </div>
+
+            <div class="border-t border-gray-400 py-4 px-4 flex justify-between items-center text-center sm:text-start">
+                <p class="text-sm sm:text-lg">
+                    &copy; Ella's Collection 2025
+                </p>
+
+                <p class="text-base sm:text-lg">
+                    Built by 
+                    <a href="https://github.com/Javis-hub" class="text-base sm:text-lg hover:text-black underline font-semibold">Javis</a>
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script>
+        const swiperEl = document.querySelector('swiper-container')
+        Object.assign(swiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoplay: {
+            delay: 1500,
+        },
+        autoplayDisableOnInteraction: false,
+        loop: true,
+        breakpoints: {
+            480: {
+                slidesPerView: 1,
+                spaceBetween: 2,
+            },
+            640: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+            },
+            768: {
+            slidesPerView: 3,
+            spaceBetween: 7,
+            },
+            1024: {
+            slidesPerView: 4,
+            spaceBetween: 7,
+            },
+        },
+        });
+        swiperEl.initialize();
+
+    </script>
+</body>
+</html>
